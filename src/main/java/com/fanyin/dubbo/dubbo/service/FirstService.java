@@ -23,5 +23,6 @@ public interface FirstService {
      */
     User createUser(String name,int age,String sex);
 
+    void say(String name,String value);
 }
 

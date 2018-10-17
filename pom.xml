@@ -40,8 +40,19 @@
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>0.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.22.Final</version>
+        </dependency>
     </dependencies>
-
+    <repositories>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Internal Releases</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/releases</url>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>

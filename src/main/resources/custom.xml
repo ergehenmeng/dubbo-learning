@@ -13,11 +13,18 @@
     <!-- 使用multicast广播注册中心暴露服务地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:21811"  />
 
-
+    <dubbo:consumer  />
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:reference id="firstService" interface="com.fanyin.dubbo.dubbo.service.FirstService" />
+    <dubbo:reference id="firstService" interface="com.fanyin.dubbo.dubbo.service.FirstService"  actives="50"/>
 
     <dubbo:reference id="globalService" interface="com.fanyin.dubbo.dubbo.service.GlobalService" />
+
+    <dubbo:reference interface="com.fanyin.dubbo.dubbo.service.ProviderNotGenerate" id="providerNotGenerate" generic="true"/>
+
+    <dubbo:reference interface="com.fanyin.dubbo.dubbo.service.CustomGenerate" id="customGenerate" />
+
+
+
 
 </beans>

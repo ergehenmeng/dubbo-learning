@@ -19,4 +19,9 @@ public class FirstServiceImpl implements FirstService {
 
         return new User(age,name,sex);
     }
+
+    @Override
+    public void say(String name, String value) {
+        System.out.println("name:" + name +  " value:" + value);
+    }
 }

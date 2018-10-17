@@ -1,6 +1,8 @@
 package com.fanyin.dubbo.dubbo;
 
+import com.alibaba.dubbo.rpc.service.GenericService;
 import com.fanyin.dubbo.dubbo.model.User;
+import com.fanyin.dubbo.dubbo.service.CustomGenerate;
 import com.fanyin.dubbo.dubbo.service.GlobalService;
 import com.fanyin.dubbo.dubbo.service.FirstService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,7 +23,15 @@ public class StartCustom {
 
         GlobalService globalService = (GlobalService) context.getBean("globalService");
         int add = globalService.add(1, 4);
+
         System.out.println("相加的结果:" + add);
+        GenericService service = (GenericService) context.getBean("providerNotGenerate");
+        Object hello = service.$invoke("hello",new String[]{"java.lang.String"},new Object[]{"四哥"});
+        System.out.println(hello);
+
+        CustomGenerate customGenerate = (CustomGenerate)context.getBean("customGenerate");
+        String generate = customGenerate.generate("五哥");
+        System.out.println(generate);
         System.in.read();
     }
 }
