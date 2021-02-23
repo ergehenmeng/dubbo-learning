@@ -5,7 +5,6 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.kafka.annotation.EnableKafka;
 
 import javax.annotation.PostConstruct;
 
@@ -13,7 +12,6 @@ import javax.annotation.PostConstruct;
  * @author 二哥很猛
  */
 @SpringBootApplication
-@EnableKafka
 public class ConsumerApplication {
 
     @Reference(version = "1.0.2")
