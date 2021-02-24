@@ -23,9 +23,7 @@ public class ConsumerApplication {
 
     @PostConstruct
     public void init() {
-        for (int i = 0; i < 5; i++) {
-            String echo = providerService.echo("二哥很猛");
-            System.out.println(echo);
-        }
+        String echo = providerService.echo("二哥很猛");
+        System.out.println(echo);
     }
 }
