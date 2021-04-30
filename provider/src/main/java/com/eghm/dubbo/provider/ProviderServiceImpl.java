@@ -9,6 +9,6 @@ public class ProviderServiceImpl implements ProviderService {
     @Override
     public String echo(String name) {
         RpcContext context = RpcContext.getContext();
-        return "Echo + " + name + " " + context.getLocalPort();
+        return "Echo + " + name + " " + context.getLocalPort() + " " + context.getAttachment("rpcName");
     }
 }
