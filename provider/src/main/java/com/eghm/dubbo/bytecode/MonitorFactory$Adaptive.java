@@ -1,12 +1,13 @@
 package com.eghm.dubbo.bytecode;
 
+
+import org.apache.dubbo.common.extension.ExtensionLoader;
+
+
 /**
  * @author 殿小二
  * @date 2021/2/24
  */
-
-import org.apache.dubbo.common.extension.ExtensionLoader;
-
 public class MonitorFactory$Adaptive implements org.apache.dubbo.monitor.MonitorFactory {
 
     @Override
