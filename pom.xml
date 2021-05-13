@@ -51,6 +51,12 @@
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <!--2.7.8版本开始才修复多版本兼容的问题-->
                 <version>2.7.8</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
